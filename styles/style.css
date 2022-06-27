@@ -1,3 +1,334 @@
+* {
+	scroll-behavior: smooth;
+	font-family: 'Roboto';
+}
+
+:root {
+	--color-primario: #FFF;
+	--color-secundario: #00B172;
+	--color-text: #000000;
+	/* --color-bg1: #ffffff;
+	--color-bg2: #eeeeee;
+	--animacion-01: transform 0.4s, width 0.4s cubic-bezier(1, 0.01, 0, 0.98) 0.2s;
+	--sombra-01: 0 0 3px 3px rgba(255, 0, 0, 0.5);
+	--color-rgb: 100, 50, 10; */
+}
+
+.header{
+    max-height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-logo1{
+    width: 30rem;
+    height: 10rem;
+    padding: 1rem 0;
+    object-fit: contain;
+}
+
+.imagen-logo2{
+    width: 10rem;
+    height: 10rem;
+    padding: 1rem 0;
+    object-fit: contain;
+    display: none;
+}
+
+.menu{
+    width: 40rem;
+    height: 10rem;
+    position: relative;
+    display: flex;
+}
+
+.aside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lista-navegacion{
+    list-style: none;
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    padding-right: 2rem;
+}
+
+.lista-navegacion li a{
+    text-decoration: none;
+	height: 100%;
+}
+
+.lista-navegacion li span{
+    font-size: 2rem;
+    color: var(--color-text);
+    transition: all .3s cubic-bezier(1,0,0,1);
+}
+
+.lista-navegacion li:hover span{
+    font-size: 1.6rem;
+    color: var(--color-primario);
+    background-color: var(--color-secundario);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+}
+
+.landing{
+    width: 100%;
+	height: 60rem;
+    /* height: calc(100%); */
+    background-color: var(--color-text);
+	background-image: url('/images/landing.jpg');
+	background-repeat: no-repeat;
+	background-size: calc(100%);
+	background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.landing-title,
+.landing-p1,
+.landing-p2{
+    color: var(--color-primario);
+    display: flex;
+    justify-content: center;
+}
+
+.landing-title{
+    font-size: 8rem;
+    padding: 2rem 0;
+}
+
+.landing-p1,
+.landing-p2{
+    font-size: 2.5rem;
+    padding: .2rem 0;
+}
+
+.discover{
+    padding: 2rem 2rem;
+}
+
+.discover-title{
+    font-size: 5rem;
+    text-align: center;
+    padding: 3rem 2rem 1rem 2rem;
+}
+
+.discover-items{
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    padding: 2rem
+}
+
+.d-item1,
+.d-item2,
+.d-item3{
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+
+.img-music,
+.img-hq,
+.img-devices{
+    width: 10rem;
+    height: 10rem;
+}
+
+.d-item1 h3,
+.d-item2 h3,
+.d-item3 h3{
+    color: var(--color-secundario);
+    font-size: 3rem;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.d-item1 p,
+.d-item2 p,
+.d-item3 p{
+    font-size: 2rem;
+    text-align: center;
+    overflow: auto;
+}
+
+.download{
+    background-color: #00B172;
+    background-image: url('/images/spotify-icon-white.png');
+	background-repeat: no-repeat;
+	background-size: 10%;
+	background-position: center;
+
+    display: flex;
+    justify-content: space-around;
+    /* gap: 5rem; */
+    flex-wrap: wrap;
+    position: relative;
+
+}
+
+.download::before,
+.download::after{
+    content: '';
+    background-color: var(--color-primario);
+    width: 1rem;
+    min-height: calc(100%);
+    max-height: calc(100%);
+    position: absolute;
+    z-index: 1;
+}
+
+.download::before{
+    left: 0;
+}
+
+.download::after{
+    right: 0;
+}
+
+.dwl-text{
+    width: 60rem;
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 3rem;
+    flex-flow: column;
+}
+
+.txt-title,
+.txt1,
+.txt2,
+.txt3{
+    color: var(--color-primario);
+    padding: 1rem 4rem;
+}
+
+.txt-title h2{
+    padding-top: 3rem;
+    font-size: 4rem;
+    
+}
+
+.txt1 h3,
+.txt2 h3,
+.txt3 h3{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    transition: all .2s cubic-bezier(1,0,0,1);
+}
+
+.txt1 p,
+.txt2 p,
+.txt3 p{
+    width: 40rem;
+    font-size: 1.6rem;
+    transition: all .2s cubic-bezier(1,0,0,1);
+}
+
+.txt1:hover p,
+.txt2:hover p,
+.txt3:hover p{
+    font-size: 2.5rem;
+}
+
+.txt1:hover h3,
+.txt2:hover h3,
+.txt3:hover h3{
+    font-size: 4rem;
+}
+
+.dwl-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 4rem;
+    margin-bottom: 2rem;
+}
+
+.dwl-img-ss{
+    height: 50rem;
+}
+
+.help{
+    background-color: var(--color-text);
+    padding: 3rem 5rem 2rem 5rem;
+    margin-top: 1rem;
+}
+
+.img-bgd-logo{
+    width: 10rem;
+}
+
+.links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.col1,
+.col2,
+.col3,
+.col4{
+    width: 20rem;
+    padding: 2rem 2rem;
+}
+
+.col2 ul,
+.col3 ul,
+.col4 ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.col2 h6,
+.col3 h6,
+.col4 h6{
+    font-size: 1.4rem;
+    color: #919496;
+    padding: 0 0 3rem 0;
+}
+
+.col2 ul li a,
+.col3 ul li a,
+.col4 ul li a{
+    text-decoration: none;
+}
+
+.col2 ul li a span,
+.col3 ul li a span,
+.col4 ul li a span{
+    font-size: 1.4rem;
+    color: var(--color-primario);
+}
+
+.col2 ul li:hover a span,
+.col3 ul li:hover a span,
+.col4 ul li:hover a span{
+    font-size: 1.4rem;
+    color: var(--color-secundario);
+}
+
+
 /*
 Colors:
 

@@ -1,0 +1,55 @@
+@media screen and (max-width: 768px) {
+    .header{
+        background-color: var(--color-text);
+    }
+	.imagen-logo1 {
+        display: none;
+    }
+    .imagen-logo2 {
+        display: block;
+    }
+    .lista-navegacion li span{
+        font-size: 1.6rem;
+        color: var(--color-primario);
+        transition: all .3s cubic-bezier(1,0,0,1);
+    }
+    .lista-navegacion li:hover span{
+        font-size: 1.6rem;
+        background-color: var(--color-secundario);
+        padding: 1rem 2rem;
+        border-radius: 50px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .imagen-logo1 {
+        width: 20rem;
+        height: 10rem;
+    }
+    .landing-title,
+    .landing-p1,
+    .landing-p2{
+        text-align: center;
+    }
+
+	.dwl-text{
+        text-align: center;
+        align-items: center;
+    }
+
+    .download{
+        background-color: var(--color-text);
+        background-position: center;
+        background-size: 100%;
+    }
+
+    .txt-title,
+    .txt1,
+    .txt2,
+    .txt3{
+        color: var(--color-secundario);
+        padding: 1rem 4rem;
+        font-weight: bold;
+    }   
+
+}
